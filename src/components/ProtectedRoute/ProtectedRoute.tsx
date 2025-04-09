@@ -15,7 +15,7 @@ const ProtectedRoute = ({
     const { user } = useAuth();
     if (user === null) return <Navigate to={"/signin"} />;
 
-    if (allowedRolls && allowedRolls.some((x) => user.roles.includes(x)))
+    if (allowedRolls && !allowedRolls.some((x) => user.roles.includes(x)))
         return <Navigate to={"/unauthorized"} />;
 
     return children;

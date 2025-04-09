@@ -34,7 +34,7 @@ const AuthProvider = ({ children }: PropsWithChildren) => {
         return setTimeout(() => {
             setCurrentUser({
                 id: 321,
-                roles: [Roles.Admin],
+                roles: [Roles.User],
                 token: "jfiupoas83y",
             } as User);
             console.log("navigate");
